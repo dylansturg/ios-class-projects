@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  DataViewController.h
 //  CountingColors
 //
 //  Created by Dylan Sturgeon on 3/18/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface DataViewController : UIViewController
 
 @end
-

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ColorsViewController.h
 //  CountingColors
 //
 //  Created by Dylan Sturgeon on 3/18/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface ColorsViewController : UIViewController
 
 @end
-

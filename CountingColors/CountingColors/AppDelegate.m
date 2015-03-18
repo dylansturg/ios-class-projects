@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ColorsViewController.h"
+#import "DataViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    ColorsViewController *colorsController = [[ColorsViewController alloc] init];
+    DataViewController *dataController = [[DataViewController alloc] init];
+    
+    [tabController setViewControllers:@[colorsController, dataController] animated:YES];
+    
+    self.window.rootViewController = tabController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

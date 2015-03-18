@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		5864059F1AB9F43C00E49066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5864059E1AB9F43C00E49066 /* main.m */; };
 		586405A21AB9F43C00E49066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405A11AB9F43C00E49066 /* AppDelegate.m */; };
-		586405A51AB9F43C00E49066 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405A41AB9F43C00E49066 /* FirstViewController.m */; };
-		586405A81AB9F43C00E49066 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405A71AB9F43C00E49066 /* SecondViewController.m */; };
-		586405AB1AB9F43C00E49066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586405A91AB9F43C00E49066 /* Main.storyboard */; };
 		586405AD1AB9F43C00E49066 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586405AC1AB9F43C00E49066 /* Images.xcassets */; };
 		586405B01AB9F43C00E49066 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586405AE1AB9F43C00E49066 /* LaunchScreen.xib */; };
 		586405BC1AB9F43C00E49066 /* CountingColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405BB1AB9F43C00E49066 /* CountingColorsTests.m */; };
+		586405C71AB9F54100E49066 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405C61AB9F54100E49066 /* UIColor+Extensions.m */; };
+		586405CB1AB9F6D900E49066 /* ColorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405C91AB9F6D900E49066 /* ColorsViewController.m */; };
+		586405CC1AB9F6D900E49066 /* ColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586405CA1AB9F6D900E49066 /* ColorsViewController.xib */; };
+		586405D01ABA033800E49066 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405CE1ABA033800E49066 /* DataViewController.m */; };
+		586405D11ABA033800E49066 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586405CF1ABA033800E49066 /* DataViewController.xib */; };
+		586405D51ABA0B6500E49066 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405D31ABA0B6500E49066 /* ColorViewController.m */; };
+		586405D61ABA0B6500E49066 /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586405D41ABA0B6500E49066 /* ColorViewController.xib */; };
+		586405D91ABA0E3800E49066 /* ColorsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586405D71ABA0E3800E49066 /* ColorsData.xcdatamodeld */; };
+		586405DD1ABA0FB300E49066 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405DC1ABA0FB300E49066 /* Color.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +39,25 @@
 		5864059E1AB9F43C00E49066 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		586405A01AB9F43C00E49066 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		586405A11AB9F43C00E49066 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		586405A31AB9F43C00E49066 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		586405A41AB9F43C00E49066 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		586405A61AB9F43C00E49066 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		586405A71AB9F43C00E49066 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		586405AA1AB9F43C00E49066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		586405AC1AB9F43C00E49066 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		586405AF1AB9F43C00E49066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		586405B51AB9F43C00E49066 /* CountingColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountingColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		586405BA1AB9F43C00E49066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586405BB1AB9F43C00E49066 /* CountingColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingColorsTests.m; sourceTree = "<group>"; };
+		586405C51AB9F54100E49066 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		586405C61AB9F54100E49066 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		586405C81AB9F6D900E49066 /* ColorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorsViewController.h; sourceTree = "<group>"; };
+		586405C91AB9F6D900E49066 /* ColorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorsViewController.m; sourceTree = "<group>"; };
+		586405CA1AB9F6D900E49066 /* ColorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorsViewController.xib; sourceTree = "<group>"; };
+		586405CD1ABA033800E49066 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		586405CE1ABA033800E49066 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		586405CF1ABA033800E49066 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+		586405D21ABA0B6500E49066 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		586405D31ABA0B6500E49066 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		586405D41ABA0B6500E49066 /* ColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
+		586405D81ABA0E3800E49066 /* ColorsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorsData.xcdatamodel; sourceTree = "<group>"; };
+		586405DB1ABA0FB300E49066 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		586405DC1ABA0FB300E49066 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,16 +99,23 @@
 		5864059B1AB9F43C00E49066 /* CountingColors */ = {
 			isa = PBXGroup;
 			children = (
+				586405DA1ABA0F9700E49066 /* Model */,
+				586405C51AB9F54100E49066 /* UIColor+Extensions.h */,
+				586405C61AB9F54100E49066 /* UIColor+Extensions.m */,
 				586405A01AB9F43C00E49066 /* AppDelegate.h */,
 				586405A11AB9F43C00E49066 /* AppDelegate.m */,
-				586405A31AB9F43C00E49066 /* FirstViewController.h */,
-				586405A41AB9F43C00E49066 /* FirstViewController.m */,
-				586405A61AB9F43C00E49066 /* SecondViewController.h */,
-				586405A71AB9F43C00E49066 /* SecondViewController.m */,
-				586405A91AB9F43C00E49066 /* Main.storyboard */,
 				586405AC1AB9F43C00E49066 /* Images.xcassets */,
 				586405AE1AB9F43C00E49066 /* LaunchScreen.xib */,
 				5864059C1AB9F43C00E49066 /* Supporting Files */,
+				586405C81AB9F6D900E49066 /* ColorsViewController.h */,
+				586405C91AB9F6D900E49066 /* ColorsViewController.m */,
+				586405CA1AB9F6D900E49066 /* ColorsViewController.xib */,
+				586405CD1ABA033800E49066 /* DataViewController.h */,
+				586405CE1ABA033800E49066 /* DataViewController.m */,
+				586405CF1ABA033800E49066 /* DataViewController.xib */,
+				586405D21ABA0B6500E49066 /* ColorViewController.h */,
+				586405D31ABA0B6500E49066 /* ColorViewController.m */,
+				586405D41ABA0B6500E49066 /* ColorViewController.xib */,
 			);
 			path = CountingColors;
 			sourceTree = "<group>";
@@ -122,6 +144,16 @@
 				586405BA1AB9F43C00E49066 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		586405DA1ABA0F9700E49066 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				586405D71ABA0E3800E49066 /* ColorsData.xcdatamodeld */,
+				586405DB1ABA0FB300E49066 /* Color.h */,
+				586405DC1ABA0FB300E49066 /* Color.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +236,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586405AB1AB9F43C00E49066 /* Main.storyboard in Resources */,
+				586405D11ABA033800E49066 /* DataViewController.xib in Resources */,
+				586405D61ABA0B6500E49066 /* ColorViewController.xib in Resources */,
 				586405B01AB9F43C00E49066 /* LaunchScreen.xib in Resources */,
+				586405CC1AB9F6D900E49066 /* ColorsViewController.xib in Resources */,
 				586405AD1AB9F43C00E49066 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586405A81AB9F43C00E49066 /* SecondViewController.m in Sources */,
+				586405CB1AB9F6D900E49066 /* ColorsViewController.m in Sources */,
+				586405DD1ABA0FB300E49066 /* Color.m in Sources */,
 				586405A21AB9F43C00E49066 /* AppDelegate.m in Sources */,
-				586405A51AB9F43C00E49066 /* FirstViewController.m in Sources */,
+				586405D01ABA033800E49066 /* DataViewController.m in Sources */,
 				5864059F1AB9F43C00E49066 /* main.m in Sources */,
+				586405D91ABA0E3800E49066 /* ColorsData.xcdatamodeld in Sources */,
+				586405D51ABA0B6500E49066 /* ColorViewController.m in Sources */,
+				586405C71AB9F54100E49066 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +288,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		586405A91AB9F43C00E49066 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				586405AA1AB9F43C00E49066 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		586405AE1AB9F43C00E49066 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -352,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CountingColors/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -362,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CountingColors/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -430,6 +462,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		586405D71ABA0E3800E49066 /* ColorsData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				586405D81ABA0E3800E49066 /* ColorsData.xcdatamodel */,
+			);
+			currentVersion = 586405D81ABA0E3800E49066 /* ColorsData.xcdatamodel */;
+			path = ColorsData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 586405911AB9F43C00E49066 /* Project object */;
 }
