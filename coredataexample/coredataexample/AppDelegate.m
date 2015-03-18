@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  CountingColors
+//  coredataexample
 //
 //  Created by Dylan Sturgeon on 3/18/15.
 //  Copyright (c) 2015 dylansturg. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ColorsViewController.h"
-#import "DataViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,16 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    UITabBarController *tabController = [[UITabBarController alloc] init];
-    ColorsViewController *colorsController = [[ColorsViewController alloc] init];
-    DataViewController *dataController = [[DataViewController alloc] init];
-    
-    [tabController setViewControllers:@[colorsController, dataController] animated:YES];
-    
-    self.window.rootViewController = tabController;
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -52,6 +40,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    // Saves changes in the application's managed object context before the application terminates.
+    [self saveContext];
 }
 
 #pragma mark - Core Data stack
@@ -70,7 +60,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ColorsData" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"coredataexample" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -84,7 +74,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"countingcolors.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"coredataexample.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

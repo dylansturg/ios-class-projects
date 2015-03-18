@@ -1,17 +1,15 @@
 //
-//  Color.m
-//  CountingColors
+//  ViewController.h
+//  coredataexample
 //
 //  Created by Dylan Sturgeon on 3/18/15.
 //  Copyright (c) 2015 dylansturg. All rights reserved.
 //
 
-#import "Color.h"
+#import <UIKit/UIKit.h>
 
+@interface ViewController : UIViewController
 
-@implementation Color
-
-@dynamic name;
-@dynamic pressedCount;
 
 @end
+

@@ -20,7 +20,8 @@
 		586405D51ABA0B6500E49066 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405D31ABA0B6500E49066 /* ColorViewController.m */; };
 		586405D61ABA0B6500E49066 /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586405D41ABA0B6500E49066 /* ColorViewController.xib */; };
 		586405D91ABA0E3800E49066 /* ColorsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586405D71ABA0E3800E49066 /* ColorsData.xcdatamodeld */; };
-		586405DD1ABA0FB300E49066 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405DC1ABA0FB300E49066 /* Color.m */; };
+		586405E01ABA16EA00E49066 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405DF1ABA16EA00E49066 /* Color.m */; };
+		586405E21ABA174E00E49066 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586405E11ABA174E00E49066 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,9 @@
 		586405D31ABA0B6500E49066 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 		586405D41ABA0B6500E49066 /* ColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
 		586405D81ABA0E3800E49066 /* ColorsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorsData.xcdatamodel; sourceTree = "<group>"; };
-		586405DB1ABA0FB300E49066 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
-		586405DC1ABA0FB300E49066 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		586405DE1ABA16EA00E49066 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		586405DF1ABA16EA00E49066 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		586405E11ABA174E00E49066 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586405E21ABA174E00E49066 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		586405901AB9F43C00E49066 = {
 			isa = PBXGroup;
 			children = (
+				586405E11ABA174E00E49066 /* CoreData.framework */,
 				5864059B1AB9F43C00E49066 /* CountingColors */,
 				586405B81AB9F43C00E49066 /* CountingColorsTests */,
 				5864059A1AB9F43C00E49066 /* Products */,
@@ -150,8 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				586405D71ABA0E3800E49066 /* ColorsData.xcdatamodeld */,
-				586405DB1ABA0FB300E49066 /* Color.h */,
-				586405DC1ABA0FB300E49066 /* Color.m */,
+				586405DE1ABA16EA00E49066 /* Color.h */,
+				586405DF1ABA16EA00E49066 /* Color.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -259,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				586405CB1AB9F6D900E49066 /* ColorsViewController.m in Sources */,
-				586405DD1ABA0FB300E49066 /* Color.m in Sources */,
+				586405E01ABA16EA00E49066 /* Color.m in Sources */,
 				586405A21AB9F43C00E49066 /* AppDelegate.m in Sources */,
 				586405D01ABA033800E49066 /* DataViewController.m in Sources */,
 				5864059F1AB9F43C00E49066 /* main.m in Sources */,

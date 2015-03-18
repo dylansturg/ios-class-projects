@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorsViewController">
             <connections>
                 <outlet property="blueTextField" destination="vqP-bM-EZL" id="0K3-5D-FGA"/>
-                <outlet property="greenTextField" destination="MCj-Ly-IHC" id="hFS-b6-BMd"/>
+                <outlet property="greenTextField" destination="Wr0-7J-f24" id="5OF-WS-THt"/>
                 <outlet property="redTextField" destination="gGt-Pi-G8q" id="wHg-fY-P73"/>
                 <outlet property="view" destination="MCj-Ly-IHC" id="c2f-xr-q7e"/>
             </connections>
@@ -20,11 +20,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo9-zX-kcr">
                     <rect key="frame" x="20" y="30" width="560" height="20"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98J-bx-W8Y">
-                    <rect key="frame" x="0.0" y="90" width="45" height="32"/>
+                    <rect key="frame" x="8" y="90" width="45" height="32"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <state key="normal" title="Red">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,7 +34,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vR-Km-mTB">
-                    <rect key="frame" x="276" y="90" width="45" height="32"/>
+                    <rect key="frame" x="278" y="90" width="45" height="32"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <state key="normal" title="Green">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,7 +44,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-lc-aGg">
-                    <rect key="frame" x="555" y="90" width="45" height="32"/>
+                    <rect key="frame" x="547" y="90" width="45" height="32"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <state key="normal" title="Blue">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,14 +54,9 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="red" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGt-Pi-G8q">
-                    <rect key="frame" x="0.0" y="182" width="187" height="30"/>
+                    <rect key="frame" x="8" y="182" width="188" height="30"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="blue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-bM-EZL">
-                    <rect key="frame" x="413" y="182" width="187" height="30"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGr-LE-nNO">
                     <rect key="frame" x="269" y="289" width="62" height="32"/>
@@ -84,14 +79,19 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="green" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wr0-7J-f24">
-                    <rect key="frame" x="207" y="182" width="186" height="30"/>
+                    <rect key="frame" x="206" y="182" width="188" height="30"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="blue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-bM-EZL">
+                    <rect key="frame" x="404" y="182" width="188" height="30"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="3vR-Km-mTB" secondAttribute="centerX" constant="2" id="0qd-Ql-yWN"/>
+                <constraint firstAttribute="centerX" secondItem="3vR-Km-mTB" secondAttribute="centerX" id="0qd-Ql-yWN"/>
                 <constraint firstAttribute="bottom" secondItem="tGr-LE-nNO" secondAttribute="bottom" constant="263" id="0xm-1N-wYQ"/>
                 <constraint firstItem="tGr-LE-nNO" firstAttribute="top" secondItem="jB7-E7-4px" secondAttribute="bottom" constant="40" id="7GQ-L4-3gL"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="top" secondItem="3vR-Km-mTB" secondAttribute="bottom" constant="60" id="BuZ-b8-JON"/>
@@ -100,20 +100,20 @@
                 <constraint firstAttribute="trailing" secondItem="uo9-zX-kcr" secondAttribute="trailing" constant="20" id="EWz-gE-05F"/>
                 <constraint firstAttribute="centerX" secondItem="Wr0-7J-f24" secondAttribute="centerX" id="Gyl-GB-3hJ"/>
                 <constraint firstItem="3vR-Km-mTB" firstAttribute="width" secondItem="Zni-lc-aGg" secondAttribute="width" id="Lro-Lu-gwC"/>
-                <constraint firstItem="Wr0-7J-f24" firstAttribute="leading" secondItem="gGt-Pi-G8q" secondAttribute="trailing" constant="20" id="MJ1-J4-VV3"/>
+                <constraint firstItem="Wr0-7J-f24" firstAttribute="leading" secondItem="gGt-Pi-G8q" secondAttribute="trailing" constant="10" id="MJ1-J4-VV3"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="width" secondItem="vqP-bM-EZL" secondAttribute="width" id="OnB-Mg-RAv"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="top" secondItem="3vR-Km-mTB" secondAttribute="bottom" constant="60" id="OnJ-Ka-iD3"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="width" secondItem="gGt-Pi-G8q" secondAttribute="width" id="PHd-ch-M5p"/>
                 <constraint firstItem="3vR-Km-mTB" firstAttribute="width" secondItem="98J-bx-W8Y" secondAttribute="width" id="RPl-aD-mvO"/>
-                <constraint firstItem="gGt-Pi-G8q" firstAttribute="leading" secondItem="MCj-Ly-IHC" secondAttribute="leading" id="TBJ-0J-l32"/>
+                <constraint firstItem="gGt-Pi-G8q" firstAttribute="leading" secondItem="MCj-Ly-IHC" secondAttribute="leading" constant="8" id="TBJ-0J-l32"/>
                 <constraint firstAttribute="centerX" secondItem="uo9-zX-kcr" secondAttribute="centerX" id="TeY-mZ-czL"/>
                 <constraint firstItem="uo9-zX-kcr" firstAttribute="top" secondItem="MCj-Ly-IHC" secondAttribute="top" constant="30" id="VF4-fm-5Sv"/>
                 <constraint firstItem="tGr-LE-nNO" firstAttribute="top" secondItem="jB7-E7-4px" secondAttribute="bottom" constant="40" id="VoV-sQ-WeJ"/>
                 <constraint firstItem="uo9-zX-kcr" firstAttribute="leading" secondItem="MCj-Ly-IHC" secondAttribute="leading" constant="20" id="aJf-ph-dGR"/>
-                <constraint firstItem="98J-bx-W8Y" firstAttribute="leading" secondItem="MCj-Ly-IHC" secondAttribute="leading" id="bNh-RD-bvr"/>
+                <constraint firstItem="98J-bx-W8Y" firstAttribute="leading" secondItem="MCj-Ly-IHC" secondAttribute="leading" constant="8" id="bNh-RD-bvr"/>
                 <constraint firstItem="98J-bx-W8Y" firstAttribute="centerY" secondItem="Zni-lc-aGg" secondAttribute="centerY" id="bl9-XO-xh8"/>
-                <constraint firstAttribute="trailing" secondItem="vqP-bM-EZL" secondAttribute="trailing" id="hZc-p2-5D9"/>
-                <constraint firstItem="vqP-bM-EZL" firstAttribute="leading" secondItem="Wr0-7J-f24" secondAttribute="trailing" constant="20" id="kFG-7X-RZl"/>
+                <constraint firstAttribute="trailing" secondItem="vqP-bM-EZL" secondAttribute="trailing" constant="8" id="hZc-p2-5D9"/>
+                <constraint firstItem="vqP-bM-EZL" firstAttribute="leading" secondItem="Wr0-7J-f24" secondAttribute="trailing" constant="10" id="kFG-7X-RZl"/>
                 <constraint firstItem="98J-bx-W8Y" firstAttribute="top" secondItem="uo9-zX-kcr" secondAttribute="bottom" constant="40" id="lcr-nN-bdi"/>
                 <constraint firstAttribute="centerX" secondItem="tGr-LE-nNO" secondAttribute="centerX" id="nue-4F-ekv"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="top" secondItem="3vR-Km-mTB" secondAttribute="bottom" constant="60" id="oZf-ZH-vRy">
@@ -129,7 +129,7 @@
                 <constraint firstItem="jB7-E7-4px" firstAttribute="top" secondItem="Wr0-7J-f24" secondAttribute="bottom" constant="5" id="tS7-I7-KYh"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="centerY" secondItem="vqP-bM-EZL" secondAttribute="centerY" id="tfK-9B-TC7"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="centerY" secondItem="gGt-Pi-G8q" secondAttribute="centerY" id="ubx-HI-H8W"/>
-                <constraint firstAttribute="trailing" secondItem="Zni-lc-aGg" secondAttribute="trailing" id="zfm-6r-hdn"/>
+                <constraint firstAttribute="trailing" secondItem="Zni-lc-aGg" secondAttribute="trailing" constant="8" id="zfm-6r-hdn"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">

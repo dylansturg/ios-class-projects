@@ -10,4 +10,7 @@
 
 @interface ColorViewController : UIViewController
 
+@property (nonatomic, copy) NSString *presentedColorName;
+@property (nonatomic, copy) UIColor *presentedColor;
+
 @end

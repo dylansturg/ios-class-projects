@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorViewController">
             <connections>
-                <outlet property="colorLabel" destination="366-xT-L3I" id="Oy5-U6-CSx"/>
                 <outlet property="countLabel" destination="jf7-h2-Kbv" id="bbB-4A-5nz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,16 +24,10 @@
                         <action selector="onDismiss:" destination="-1" eventType="touchUpInside" id="OUL-Cy-h8b"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Pressed Color]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="366-xT-L3I">
-                    <rect key="frame" x="243" y="40" width="115" height="20"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Pressed Count]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-h2-Kbv">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="[Pressed Count]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-h2-Kbv">
                     <rect key="frame" x="242" y="70" width="117" height="20"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -42,10 +35,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="YiI-Na-X3M" secondAttribute="bottom" constant="30" id="2eW-vX-vff"/>
                 <constraint firstAttribute="centerX" secondItem="jf7-h2-Kbv" secondAttribute="centerX" id="3O7-yX-qRF"/>
-                <constraint firstAttribute="centerX" secondItem="366-xT-L3I" secondAttribute="centerX" id="InP-M7-m6K"/>
-                <constraint firstItem="jf7-h2-Kbv" firstAttribute="top" secondItem="366-xT-L3I" secondAttribute="bottom" constant="10" id="Yam-TS-212"/>
                 <constraint firstAttribute="centerX" secondItem="YiI-Na-X3M" secondAttribute="centerX" id="q7M-Ka-frN"/>
-                <constraint firstItem="366-xT-L3I" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="zbo-Bx-EQz"/>
             </constraints>
         </view>
     </objects>

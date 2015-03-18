@@ -13,7 +13,6 @@
 @interface Color : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) id color;
 @property (nonatomic, retain) NSNumber * pressedCount;
 
 @end

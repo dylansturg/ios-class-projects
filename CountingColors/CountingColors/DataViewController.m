@@ -7,8 +7,17 @@
 //
 
 #import "DataViewController.h"
+#import "AppDelegate.h"
+#import "Color.h"
+
+#import <CoreData/CoreData.h>
 
 @interface DataViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *redPressedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *greenPressedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bluePressedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *customPressedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *randomPressedLabel;
 
 @end
 
@@ -24,22 +33,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
+    NSArray *colorNames = @[@"Red", @"Green", @"Blue", @"Custom", @"Random"];
+    for (NSString* name in colorNames) {
+        int pressedCount = [self fetchPressedCount:name];
+        UILabel *label = [self valueForKey:[NSString stringWithFormat:@"%@PressedLabel", [name lowercaseString]]];
+        if (label){
+            label.text = [NSString stringWithFormat:@"%d", pressedCount];
+        }
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onReset:(id)sender {
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (int) fetchPressedCount: (NSString*) colorNamed{
+    NSManagedObjectContext *context = ((AppDelegate*) [[UIApplication sharedApplication] delegate]).managedObjectContext;
+    NSFetchRequest *fetchColor = [[NSFetchRequest alloc]initWithEntityName:@"Color"];
+    fetchColor.predicate = [NSPredicate predicateWithFormat:@"name == %@", colorNamed];
+    
+    NSError *error = nil;
+    NSArray *results = [context executeFetchRequest:fetchColor error:&error];
+    
+    if (error) {
+        NSLog(@"Error fetching Colors from CoreData: %@", error);
+    }
+    
+    if (results.count > 0){
+        return (int) ((Color*) results[0]).pressedCount.integerValue;
+    }
+    
+    return 0;
 }
-*/
+
+
 
 @end
