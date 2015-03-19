@@ -57,6 +57,9 @@
                     <rect key="frame" x="8" y="182" width="188" height="30"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="qRc-hc-UCC"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGr-LE-nNO">
                     <rect key="frame" x="269" y="289" width="62" height="32"/>
@@ -82,14 +85,21 @@
                     <rect key="frame" x="206" y="182" width="188" height="30"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="AgB-dc-PEs"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="blue" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-bM-EZL">
                     <rect key="frame" x="404" y="182" width="188" height="30"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="avB-ll-hSg"/>
+                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="3vR-Km-mTB" secondAttribute="centerX" id="0qd-Ql-yWN"/>
                 <constraint firstAttribute="bottom" secondItem="tGr-LE-nNO" secondAttribute="bottom" constant="263" id="0xm-1N-wYQ"/>

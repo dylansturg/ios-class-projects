@@ -17,10 +17,12 @@
 @interface ColorsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *redTextField;
 @property (weak, nonatomic) IBOutlet UITextField *greenTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *blueTextField;
 
 @end
+
+// Thanks for making my regex look even worse Xcode...
+static NSString* const DecimalRegex = @"^(?:|0|[1-9]\\d*)(?:\\.\\d*)?$";
 
 @implementation ColorsViewController
 
@@ -31,6 +33,16 @@
     return self;
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    UITapGestureRecognizer *viewTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTapped:)];
+    [self.view addGestureRecognizer:viewTap];
+}
+
+- (IBAction)viewTapped:(UITapGestureRecognizer *)sender {
+    [self.view endEditing:NO];
+}
 
 - (IBAction)redClicked:(UIButton *)sender {
     [self logColorPress:@"Red"];
@@ -56,6 +68,15 @@
     
     UIColor *customColor = [UIColor colorWithRed:colorRed green:colorGreen blue:colorBlue alpha:1.0];
     [self presentColorViewController:customColor named:@"Custom"];
+}
+
+- (BOOL)validateDecimalInput:(NSString*) input{
+    NSPredicate *regexMatch = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", DecimalRegex];
+    if ([regexMatch evaluateWithObject:input]) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 - (IBAction)randomClicked:(UIButton *)sender {
@@ -100,6 +121,24 @@
     colorVC.presentedColorName = named;
     
     [self presentViewController:colorVC animated:YES completion:nil];
+}
+
+# pragma mark - UITextFieldDelegate
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSString *updated = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    if (![self validateDecimalInput:updated]){
+        textField.textColor = [UIColor redColor];
+    } else {
+        textField.textColor = [UIColor blackColor];
+    }
+    
+    return YES;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end

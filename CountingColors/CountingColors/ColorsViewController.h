@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorsViewController : UIViewController
+@interface ColorsViewController : UIViewController <UITextFieldDelegate>
 
 @end
