@@ -84,7 +84,7 @@
     
     if(results.count > 0){
         for (Color* color in results) {
-            color.pressedCount = [NSNumber numberWithInt:0];
+            color.sessionPressedCount = [NSNumber numberWithInt:0];
         }
         [context save:&error];
         if (error) {
@@ -107,7 +107,7 @@
     }
     
     if (results.count > 0){
-        return (int) ((Color*) results[0]).pressedCount.integerValue;
+        return (int) ((Color*) results[0]).sessionPressedCount.integerValue;
     }
     
     return 0;

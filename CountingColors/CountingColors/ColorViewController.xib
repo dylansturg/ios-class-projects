@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorViewController">
             <connections>
-                <outlet property="countLabel" destination="jf7-h2-Kbv" id="bbB-4A-5nz"/>
+                <outlet property="sessionCountLabel" destination="ISd-XZ-jA5" id="bAa-2b-Uca"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,17 +24,18 @@
                         <action selector="onDismiss:" destination="-1" eventType="touchUpInside" id="OUL-Cy-h8b"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="[Pressed Count]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-h2-Kbv">
-                    <rect key="frame" x="242" y="70" width="117" height="20"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Since Reset Pressed Count]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISd-XZ-jA5">
+                    <rect key="frame" x="190" y="60" width="220" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="YiI-Na-X3M" secondAttribute="bottom" constant="30" id="2eW-vX-vff"/>
-                <constraint firstAttribute="centerX" secondItem="jf7-h2-Kbv" secondAttribute="centerX" id="3O7-yX-qRF"/>
+                <constraint firstAttribute="centerX" secondItem="ISd-XZ-jA5" secondAttribute="centerX" id="Uoe-iH-R52"/>
+                <constraint firstItem="ISd-XZ-jA5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="gf8-2O-ioT"/>
                 <constraint firstAttribute="centerX" secondItem="YiI-Na-X3M" secondAttribute="centerX" id="q7M-Ka-frN"/>
             </constraints>
         </view>

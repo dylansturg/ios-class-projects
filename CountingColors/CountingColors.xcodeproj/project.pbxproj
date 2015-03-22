@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5811F5B91ABF48E90073B168 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5811F5B71ABF48E90073B168 /* Localizable.strings */; };
 		5864059F1AB9F43C00E49066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5864059E1AB9F43C00E49066 /* main.m */; };
 		586405A21AB9F43C00E49066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 586405A11AB9F43C00E49066 /* AppDelegate.m */; };
 		586405AD1AB9F43C00E49066 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586405AC1AB9F43C00E49066 /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5811F5B81ABF48E90073B168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		586405991AB9F43C00E49066 /* CountingColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountingColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5864059D1AB9F43C00E49066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5864059E1AB9F43C00E49066 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				5864059D1AB9F43C00E49066 /* Info.plist */,
 				5864059E1AB9F43C00E49066 /* main.m */,
+				5811F5B71ABF48E90073B168 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				586405D11ABA033800E49066 /* DataViewController.xib in Resources */,
+				5811F5B91ABF48E90073B168 /* Localizable.strings in Resources */,
 				586405D61ABA0B6500E49066 /* ColorViewController.xib in Resources */,
 				586405B01AB9F43C00E49066 /* LaunchScreen.xib in Resources */,
 				586405CC1AB9F6D900E49066 /* ColorsViewController.xib in Resources */,
@@ -292,6 +296,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5811F5B71ABF48E90073B168 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5811F5B81ABF48E90073B168 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		586405AE1AB9F43C00E49066 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

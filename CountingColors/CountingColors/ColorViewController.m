@@ -13,7 +13,7 @@
 #import <CoreData/CoreData.h>
 
 @interface ColorViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sessionCountLabel;
 @end
 
 @implementation ColorViewController
@@ -23,8 +23,8 @@
     // Do any additional setup after loading the view from its nib.
     
     if ([self presentedColorName]){
-        int presentedCount = [self fetchColorCount:[self presentedColorName]];
-        self.countLabel.text = [NSString stringWithFormat:@"Pressed %d Times", presentedCount];
+        int sessionPressedCount = [self fetchColorCount:[self presentedColorName] session: YES];
+        self.sessionCountLabel.text = [NSString stringWithFormat:NSLocalizedString(@"SessionPressedFormat", nil), sessionPressedCount];
     }
     
     if([self presentedColor]){
@@ -32,7 +32,7 @@
     }
 }
 
-- (int) fetchColorCount: (NSString*) colorName {
+- (int) fetchColorCount: (NSString*) colorName session:(BOOL)getSession {
     NSManagedObjectContext *context = ((AppDelegate*) [[UIApplication sharedApplication] delegate]).managedObjectContext;
     NSFetchRequest *fetchColors = [[NSFetchRequest alloc] initWithEntityName:@"Color"];
     fetchColors.predicate = [NSPredicate predicateWithFormat:@"name == %@", colorName];
@@ -48,7 +48,9 @@
         // error
         return 0;
     } else {
-        return (int) ((Color*)results[0]).pressedCount.integerValue;
+        Color *color = (Color*)results[0];
+        int value = getSession ? color.sessionPressedCount.intValue : color.pressedCount.intValue;
+        return value;
     }
 }
 

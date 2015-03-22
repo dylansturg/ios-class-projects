@@ -2,7 +2,7 @@
 //  Color.h
 //  CountingColors
 //
-//  Created by Dylan Sturgeon on 3/18/15.
+//  Created by Dylan Sturgeon on 3/20/15.
 //  Copyright (c) 2015 dylansturg. All rights reserved.
 //
 
@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * pressedCount;
+@property (nonatomic, retain) NSNumber * sessionPressedCount;
 
 @end

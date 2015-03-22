@@ -101,11 +101,13 @@ static NSString* const DecimalRegex = @"^(?:|0|[1-9]\\d*)(?:\\.\\d*)?$";
         for (id colorResult in results) {
             Color *color = (Color*) colorResult;
             color.pressedCount = [NSNumber numberWithInt: color.pressedCount.intValue + 1];
+            color.sessionPressedCount = [NSNumber numberWithInt:color.sessionPressedCount.intValue + 1];
         }
     } else {
         Color *newColor = [NSEntityDescription insertNewObjectForEntityForName:@"Color" inManagedObjectContext:context];
         newColor.name = [colorName copy];
         newColor.pressedCount = [NSNumber numberWithInt:1];
+        newColor.sessionPressedCount = [NSNumber numberWithInt:1];
     }
     
     [context save:&error];
