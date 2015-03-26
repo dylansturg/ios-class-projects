@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -24,7 +24,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98J-bx-W8Y">
-                    <rect key="frame" x="8" y="90" width="45" height="32"/>
+                    <rect key="frame" x="8" y="90" width="181" height="32"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <state key="normal" title="Red">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,23 +34,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vR-Km-mTB">
-                    <rect key="frame" x="278" y="90" width="45" height="32"/>
+                    <rect key="frame" x="209" y="90" width="182" height="32"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <state key="normal" title="Green">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="greenClicked:" destination="-1" eventType="touchUpInside" id="7Ti-eK-Qhc"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-lc-aGg">
-                    <rect key="frame" x="547" y="90" width="45" height="32"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                    <state key="normal" title="Blue">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="blueClicked:" destination="-1" eventType="touchUpInside" id="1fg-br-OJp"/>
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="red" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGt-Pi-G8q">
@@ -97,12 +87,23 @@
                         <outlet property="delegate" destination="-1" id="avB-ll-hSg"/>
                     </connections>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-lc-aGg">
+                    <rect key="frame" x="411" y="90" width="181" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <state key="normal" title="Blue">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blueClicked:" destination="-1" eventType="touchUpInside" id="1fg-br-OJp"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="3vR-Km-mTB" secondAttribute="centerX" id="0qd-Ql-yWN"/>
                 <constraint firstAttribute="bottom" secondItem="tGr-LE-nNO" secondAttribute="bottom" constant="263" id="0xm-1N-wYQ"/>
+                <constraint firstItem="Zni-lc-aGg" firstAttribute="leading" secondItem="3vR-Km-mTB" secondAttribute="trailing" constant="20" id="6Oi-J3-UeC"/>
                 <constraint firstItem="tGr-LE-nNO" firstAttribute="top" secondItem="jB7-E7-4px" secondAttribute="bottom" constant="40" id="7GQ-L4-3gL"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="top" secondItem="3vR-Km-mTB" secondAttribute="bottom" constant="60" id="BuZ-b8-JON"/>
                 <constraint firstItem="98J-bx-W8Y" firstAttribute="top" secondItem="uo9-zX-kcr" secondAttribute="bottom" constant="40" id="CLx-QV-ioj"/>
@@ -125,6 +126,7 @@
                 <constraint firstAttribute="trailing" secondItem="vqP-bM-EZL" secondAttribute="trailing" constant="8" id="hZc-p2-5D9"/>
                 <constraint firstItem="vqP-bM-EZL" firstAttribute="leading" secondItem="Wr0-7J-f24" secondAttribute="trailing" constant="10" id="kFG-7X-RZl"/>
                 <constraint firstItem="98J-bx-W8Y" firstAttribute="top" secondItem="uo9-zX-kcr" secondAttribute="bottom" constant="40" id="lcr-nN-bdi"/>
+                <constraint firstItem="3vR-Km-mTB" firstAttribute="leading" secondItem="98J-bx-W8Y" secondAttribute="trailing" constant="20" id="mvM-oR-zoI"/>
                 <constraint firstAttribute="centerX" secondItem="tGr-LE-nNO" secondAttribute="centerX" id="nue-4F-ekv"/>
                 <constraint firstItem="Wr0-7J-f24" firstAttribute="top" secondItem="3vR-Km-mTB" secondAttribute="bottom" constant="60" id="oZf-ZH-vRy">
                     <variation key="heightClass=compact" constant="20"/>
