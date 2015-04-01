@@ -56,20 +56,20 @@ CGFloat MinimumMultiplier = 0.0001;
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    [self reconstrainForSize:self.view.bounds.size];
+    [self updateViewConstraints];
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    
-    
+- (void)reconstrainForSize:(CGSize)size {
     CGFloat multiplier = MAX(self.slider.value, MinimumMultiplier);
     if ([self sizeIsLandscape:size]) {
         self.proportionalHeight.active = NO;
-        
         if (self.proportionalWidth == nil){
-
+            
             self.proportionalWidth = [NSLayoutConstraint constraintWithItem:self.proportionalHeight.firstItem attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.proportionalHeight.secondItem attribute:NSLayoutAttributeWidth multiplier:multiplier constant:self.proportionalHeight.constant];
             
+            // Duplicate height's priority in case it's changed in IB
             self.proportionalWidth.priority = self.proportionalHeight.priority;
             
             NSLayoutConstraint *redTop = [NSLayoutConstraint constraintWithItem:self.redBox attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.boxContainer attribute:NSLayoutAttributeTop multiplier:1 constant:0];
@@ -79,9 +79,10 @@ CGFloat MinimumMultiplier = 0.0001;
             NSLayoutConstraint *blueBottom = [NSLayoutConstraint constraintWithItem:self.blueBox attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.boxContainer attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
             
             NSLayoutConstraint *horzSpace = [NSLayoutConstraint constraintWithItem:self.redBox attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.blueBox attribute:NSLayoutAttributeLeft multiplier:1 constant:-8];
-
+            
             self.landscapeConstraints = @[redTop, blueTop, redBottom, blueBottom, horzSpace];
         } else {
+            self.proportionalWidth.active = NO;
             self.proportionalWidth = [self duplicateConstraint:self.proportionalWidth withMultiplier:multiplier];
         }
         
@@ -93,12 +94,21 @@ CGFloat MinimumMultiplier = 0.0001;
     } else {
         self.proportionalWidth.active = NO;
         
-        [NSLayoutConstraint deactivateConstraints:self.landscapeConstraints];
+        if (self.landscapeConstraints != nil) {
+            [NSLayoutConstraint deactivateConstraints:self.landscapeConstraints];
+        }
         
+        self.proportionalHeight.active = NO;
         self.proportionalHeight = [self duplicateConstraint:self.proportionalHeight withMultiplier:multiplier];
         self.proportionalHeight.active = YES;
         [NSLayoutConstraint activateConstraints:self.portraitConstraints];
     }
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [self reconstrainForSize:size];
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         [self updateViewConstraints];
