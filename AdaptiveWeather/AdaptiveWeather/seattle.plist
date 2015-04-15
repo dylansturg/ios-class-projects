@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CityName</key>
+	<string>Seattle</string>
+	<key>SunriseTime</key>
+	<string>7:38 AM</string>
+	<key>SunsetTime</key>
+	<string>5:07 PM</string>
+	<key>Temperatures</key>
+	<dict>
+		<key>0</key>
+		<integer>42</integer>
+		<key>1</key>
+		<integer>41</integer>
+		<key>2</key>
+		<integer>41</integer>
+		<key>3</key>
+		<integer>39</integer>
+		<key>4</key>
+		<integer>40</integer>
+		<key>5</key>
+		<integer>41</integer>
+		<key>6</key>
+		<integer>40</integer>
+		<key>7</key>
+		<integer>39</integer>
+		<key>8</key>
+		<integer>39</integer>
+		<key>9</key>
+		<integer>39</integer>
+		<key>10</key>
+		<integer>39</integer>
+		<key>11</key>
+		<integer>41</integer>
+		<key>12</key>
+		<integer>47</integer>
+		<key>13</key>
+		<integer>48</integer>
+		<key>14</key>
+		<integer>48</integer>
+		<key>15</key>
+		<integer>48</integer>
+		<key>16</key>
+		<integer>47</integer>
+		<key>17</key>
+		<integer>47</integer>
+		<key>18</key>
+		<integer>43</integer>
+		<key>19</key>
+		<integer>42</integer>
+		<key>20</key>
+		<integer>41</integer>
+		<key>21</key>
+		<integer>39</integer>
+		<key>22</key>
+		<integer>40</integer>
+		<key>23</key>
+		<integer>42</integer>
+	</dict>
+</dict>
+</plist>
