@@ -115,19 +115,20 @@ NSString *tempFormat = @"%ld °F";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     ForecastTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-    NSInteger hourForCell = [NSDate currentHour] + indexPath.row + 1; // no need to show current
+
+    NSInteger incrementedHour = [NSDate currentHour] + indexPath.row + 1; // no need to show current
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setHour:incrementedHour];
+    
+    // Could just take the hour mod 24, but that's no fun - what if someone tries to use this with a different calendar?
+    NSDate *dateForCell = [self.currentCalendar dateFromComponents:comps];
+    NSInteger hourForCell = [self.currentCalendar component:NSCalendarUnitHour fromDate:dateForCell];
     NSInteger tempForCell = [self.currentForecast temperatureForHour:hourForCell];
     
-    NSDateComponents *comps = [[NSDateComponents alloc] init];
-    [comps setHour:hourForCell];
-    
     NSString* time = [self.dateFormatter stringFromDate:[self.currentCalendar dateFromComponents:comps]];
-    
     cell.timeLabel.text = time;
     cell.tempLabel.text = [NSString stringWithFormat:@"%ld °F", (long)tempForCell];
-    
     
     return cell;
 }
