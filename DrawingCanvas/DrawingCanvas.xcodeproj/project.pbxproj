@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		588AD7D41AE6A51400435E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7D31AE6A51400435E8E /* main.m */; };
+		588AD7D71AE6A51400435E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7D61AE6A51400435E8E /* AppDelegate.m */; };
+		588AD7DA1AE6A51400435E8E /* DrawingCanvas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7D81AE6A51400435E8E /* DrawingCanvas.xcdatamodeld */; };
+		588AD7DD1AE6A51400435E8E /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7DC1AE6A51400435E8E /* CanvasViewController.m */; };
+		588AD7E01AE6A51400435E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588AD7DE1AE6A51400435E8E /* Main.storyboard */; };
+		588AD7E21AE6A51400435E8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588AD7E11AE6A51400435E8E /* Images.xcassets */; };
+		588AD7E51AE6A51400435E8E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588AD7E31AE6A51400435E8E /* LaunchScreen.xib */; };
+		588AD7F11AE6A51400435E8E /* DrawingCanvasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7F01AE6A51400435E8E /* DrawingCanvasTests.m */; };
+		588AD7FC1AE6A60D00435E8E /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7FB1AE6A60D00435E8E /* CanvasView.m */; };
+		588AD7FE1AE6A64E00435E8E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 588AD7FD1AE6A64E00435E8E /* Settings.bundle */; };
+		588AD8041AE6AB7600435E8E /* SettingsKeysHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD8031AE6AB7600435E8E /* SettingsKeysHelper.m */; };
+		588AD8081AE6B01D00435E8E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD8071AE6B01D00435E8E /* UIColor+Hex.m */; };
+		588AD80A1AE6B3DE00435E8E /* SettingsDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588AD8091AE6B3DE00435E8E /* SettingsDefaults.plist */; };
+		588AD80D1AE6B81A00435E8E /* SelectableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD80C1AE6B81A00435E8E /* SelectableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		588AD7EB1AE6A51400435E8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 588AD7C61AE6A51400435E8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 588AD7CD1AE6A51400435E8E;
+			remoteInfo = DrawingCanvas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		588AD7CE1AE6A51400435E8E /* DrawingCanvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingCanvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		588AD7D21AE6A51400435E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		588AD7D31AE6A51400435E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		588AD7D51AE6A51400435E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		588AD7D61AE6A51400435E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		588AD7D91AE6A51400435E8E /* DrawingCanvas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawingCanvas.xcdatamodel; sourceTree = "<group>"; };
+		588AD7DB1AE6A51400435E8E /* CanvasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		588AD7DC1AE6A51400435E8E /* CanvasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
+		588AD7DF1AE6A51400435E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		588AD7E11AE6A51400435E8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		588AD7E41AE6A51400435E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		588AD7EA1AE6A51400435E8E /* DrawingCanvasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingCanvasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		588AD7EF1AE6A51400435E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		588AD7F01AE6A51400435E8E /* DrawingCanvasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingCanvasTests.m; sourceTree = "<group>"; };
+		588AD7FA1AE6A60D00435E8E /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		588AD7FB1AE6A60D00435E8E /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		588AD7FD1AE6A64E00435E8E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		588AD8021AE6AB7600435E8E /* SettingsKeysHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsKeysHelper.h; sourceTree = "<group>"; };
+		588AD8031AE6AB7600435E8E /* SettingsKeysHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsKeysHelper.m; sourceTree = "<group>"; };
+		588AD8061AE6B01D00435E8E /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		588AD8071AE6B01D00435E8E /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		588AD8091AE6B3DE00435E8E /* SettingsDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingsDefaults.plist; sourceTree = "<group>"; };
+		588AD80B1AE6B81A00435E8E /* SelectableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectableView.h; sourceTree = "<group>"; };
+		588AD80C1AE6B81A00435E8E /* SelectableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectableView.m; sourceTree = "<group>"; };
+		588AD80E1AE6BA1000435E8E /* ShapeDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeDataDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		588AD7CB1AE6A51400435E8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		588AD7E71AE6A51400435E8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		588AD7C51AE6A51400435E8E = {
+			isa = PBXGroup;
+			children = (
+				588AD7D01AE6A51400435E8E /* DrawingCanvas */,
+				588AD7ED1AE6A51400435E8E /* DrawingCanvasTests */,
+				588AD7CF1AE6A51400435E8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		588AD7CF1AE6A51400435E8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				588AD7CE1AE6A51400435E8E /* DrawingCanvas.app */,
+				588AD7EA1AE6A51400435E8E /* DrawingCanvasTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		588AD7D01AE6A51400435E8E /* DrawingCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				588AD7D51AE6A51400435E8E /* AppDelegate.h */,
+				588AD7D61AE6A51400435E8E /* AppDelegate.m */,
+				588AD7DB1AE6A51400435E8E /* CanvasViewController.h */,
+				588AD7DC1AE6A51400435E8E /* CanvasViewController.m */,
+				588AD7DE1AE6A51400435E8E /* Main.storyboard */,
+				588AD7E11AE6A51400435E8E /* Images.xcassets */,
+				588AD7E31AE6A51400435E8E /* LaunchScreen.xib */,
+				588AD7D81AE6A51400435E8E /* DrawingCanvas.xcdatamodeld */,
+				588AD7D11AE6A51400435E8E /* Supporting Files */,
+				588AD7FA1AE6A60D00435E8E /* CanvasView.h */,
+				588AD7FB1AE6A60D00435E8E /* CanvasView.m */,
+				588AD8021AE6AB7600435E8E /* SettingsKeysHelper.h */,
+				588AD8031AE6AB7600435E8E /* SettingsKeysHelper.m */,
+				588AD8061AE6B01D00435E8E /* UIColor+Hex.h */,
+				588AD8071AE6B01D00435E8E /* UIColor+Hex.m */,
+				588AD80B1AE6B81A00435E8E /* SelectableView.h */,
+				588AD80C1AE6B81A00435E8E /* SelectableView.m */,
+				588AD80E1AE6BA1000435E8E /* ShapeDataDelegate.h */,
+			);
+			path = DrawingCanvas;
+			sourceTree = "<group>";
+		};
+		588AD7D11AE6A51400435E8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				588AD7FD1AE6A64E00435E8E /* Settings.bundle */,
+				588AD7D21AE6A51400435E8E /* Info.plist */,
+				588AD7D31AE6A51400435E8E /* main.m */,
+				588AD8091AE6B3DE00435E8E /* SettingsDefaults.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		588AD7ED1AE6A51400435E8E /* DrawingCanvasTests */ = {
+			isa = PBXGroup;
+			children = (
+				588AD7F01AE6A51400435E8E /* DrawingCanvasTests.m */,
+				588AD7EE1AE6A51400435E8E /* Supporting Files */,
+			);
+			path = DrawingCanvasTests;
+			sourceTree = "<group>";
+		};
+		588AD7EE1AE6A51400435E8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				588AD7EF1AE6A51400435E8E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		588AD7CD1AE6A51400435E8E /* DrawingCanvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 588AD7F41AE6A51400435E8E /* Build configuration list for PBXNativeTarget "DrawingCanvas" */;
+			buildPhases = (
+				588AD7CA1AE6A51400435E8E /* Sources */,
+				588AD7CB1AE6A51400435E8E /* Frameworks */,
+				588AD7CC1AE6A51400435E8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawingCanvas;
+			productName = DrawingCanvas;
+			productReference = 588AD7CE1AE6A51400435E8E /* DrawingCanvas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		588AD7E91AE6A51400435E8E /* DrawingCanvasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 588AD7F71AE6A51400435E8E /* Build configuration list for PBXNativeTarget "DrawingCanvasTests" */;
+			buildPhases = (
+				588AD7E61AE6A51400435E8E /* Sources */,
+				588AD7E71AE6A51400435E8E /* Frameworks */,
+				588AD7E81AE6A51400435E8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				588AD7EC1AE6A51400435E8E /* PBXTargetDependency */,
+			);
+			name = DrawingCanvasTests;
+			productName = DrawingCanvasTests;
+			productReference = 588AD7EA1AE6A51400435E8E /* DrawingCanvasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		588AD7C61AE6A51400435E8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = dylansturg;
+				TargetAttributes = {
+					588AD7CD1AE6A51400435E8E = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					588AD7E91AE6A51400435E8E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 588AD7CD1AE6A51400435E8E;
+					};
+				};
+			};
+			buildConfigurationList = 588AD7C91AE6A51400435E8E /* Build configuration list for PBXProject "DrawingCanvas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 588AD7C51AE6A51400435E8E;
+			productRefGroup = 588AD7CF1AE6A51400435E8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				588AD7CD1AE6A51400435E8E /* DrawingCanvas */,
+				588AD7E91AE6A51400435E8E /* DrawingCanvasTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		588AD7CC1AE6A51400435E8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588AD7FE1AE6A64E00435E8E /* Settings.bundle in Resources */,
+				588AD7E01AE6A51400435E8E /* Main.storyboard in Resources */,
+				588AD80A1AE6B3DE00435E8E /* SettingsDefaults.plist in Resources */,
+				588AD7E51AE6A51400435E8E /* LaunchScreen.xib in Resources */,
+				588AD7E21AE6A51400435E8E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		588AD7E81AE6A51400435E8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		588AD7CA1AE6A51400435E8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588AD8041AE6AB7600435E8E /* SettingsKeysHelper.m in Sources */,
+				588AD7D71AE6A51400435E8E /* AppDelegate.m in Sources */,
+				588AD80D1AE6B81A00435E8E /* SelectableView.m in Sources */,
+				588AD7DA1AE6A51400435E8E /* DrawingCanvas.xcdatamodeld in Sources */,
+				588AD7DD1AE6A51400435E8E /* CanvasViewController.m in Sources */,
+				588AD8081AE6B01D00435E8E /* UIColor+Hex.m in Sources */,
+				588AD7D41AE6A51400435E8E /* main.m in Sources */,
+				588AD7FC1AE6A60D00435E8E /* CanvasView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		588AD7E61AE6A51400435E8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588AD7F11AE6A51400435E8E /* DrawingCanvasTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		588AD7EC1AE6A51400435E8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 588AD7CD1AE6A51400435E8E /* DrawingCanvas */;
+			targetProxy = 588AD7EB1AE6A51400435E8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		588AD7DE1AE6A51400435E8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				588AD7DF1AE6A51400435E8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		588AD7E31AE6A51400435E8E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				588AD7E41AE6A51400435E8E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		588AD7F21AE6A51400435E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		588AD7F31AE6A51400435E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		588AD7F51AE6A51400435E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawingCanvas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		588AD7F61AE6A51400435E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawingCanvas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		588AD7F81AE6A51400435E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrawingCanvasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawingCanvas.app/DrawingCanvas";
+			};
+			name = Debug;
+		};
+		588AD7F91AE6A51400435E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrawingCanvasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawingCanvas.app/DrawingCanvas";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		588AD7C91AE6A51400435E8E /* Build configuration list for PBXProject "DrawingCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				588AD7F21AE6A51400435E8E /* Debug */,
+				588AD7F31AE6A51400435E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		588AD7F41AE6A51400435E8E /* Build configuration list for PBXNativeTarget "DrawingCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				588AD7F51AE6A51400435E8E /* Debug */,
+				588AD7F61AE6A51400435E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		588AD7F71AE6A51400435E8E /* Build configuration list for PBXNativeTarget "DrawingCanvasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				588AD7F81AE6A51400435E8E /* Debug */,
+				588AD7F91AE6A51400435E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		588AD7D81AE6A51400435E8E /* DrawingCanvas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				588AD7D91AE6A51400435E8E /* DrawingCanvas.xcdatamodel */,
+			);
+			currentVersion = 588AD7D91AE6A51400435E8E /* DrawingCanvas.xcdatamodel */;
+			path = DrawingCanvas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 588AD7C61AE6A51400435E8E /* Project object */;
+}

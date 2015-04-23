@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Canvas View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CanvasViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-Nv-DcQ" customClass="CanvasView">
+                                <rect key="frame" x="134" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3YE-Kf-CdL"/>
+                                    <constraint firstAttribute="width" constant="300" id="iPV-vh-tM0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="nf4-Nv-DcQ" secondAttribute="centerY" priority="250" id="DJ4-UN-jMs"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="nf4-Nv-DcQ" secondAttribute="trailing" id="HbY-nG-3il"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="HzS-xq-NnV"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="144" id="MqW-fp-uUs"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="top" id="ROi-hs-XDK"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="158" id="ZSy-w9-iIi"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqb-I1-iOI"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" constant="130" id="i0R-Pc-QRf"/>
+                            <constraint firstAttribute="centerX" secondItem="nf4-Nv-DcQ" secondAttribute="centerX" priority="250" id="izs-nh-UiD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="nf4-Nv-DcQ" secondAttribute="bottom" id="krj-ZX-fgx"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" priority="750" id="saK-54-Zvr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nf4-Nv-DcQ" secondAttribute="bottom" priority="750" constant="150" id="xPb-nC-Hcu"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" id="xkp-9o-thy"/>
+                            <constraint firstItem="nf4-Nv-DcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="750" constant="134" id="ypY-sb-CnW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HbY-nG-3il"/>
+                                <exclude reference="HzS-xq-NnV"/>
+                                <exclude reference="MqW-fp-uUs"/>
+                                <exclude reference="ROi-hs-XDK"/>
+                                <exclude reference="ZSy-w9-iIi"/>
+                                <exclude reference="fqb-I1-iOI"/>
+                                <exclude reference="i0R-Pc-QRf"/>
+                                <exclude reference="saK-54-Zvr"/>
+                                <exclude reference="xkp-9o-thy"/>
+                                <exclude reference="krj-ZX-fgx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="canvas" destination="nf4-Nv-DcQ" id="ZVJ-lw-ovV"/>
+                        <outlet property="canvasBottomConstraint" destination="xPb-nC-Hcu" id="xEW-6N-BRK"/>
+                        <outlet property="canvasHeightConstraint" destination="3YE-Kf-CdL" id="WtT-Mt-shF"/>
+                        <outlet property="canvasLeadingConstraint" destination="ypY-sb-CnW" id="bEf-4N-HxJ"/>
+                        <outlet property="canvasWidthConstraint" destination="iPV-vh-tM0" id="AzH-gV-kCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
