@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		588AD7D41AE6A51400435E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7D31AE6A51400435E8E /* main.m */; };
 		588AD7D71AE6A51400435E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7D61AE6A51400435E8E /* AppDelegate.m */; };
-		588AD7DA1AE6A51400435E8E /* DrawingCanvas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7D81AE6A51400435E8E /* DrawingCanvas.xcdatamodeld */; };
 		588AD7DD1AE6A51400435E8E /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AD7DC1AE6A51400435E8E /* CanvasViewController.m */; };
 		588AD7E01AE6A51400435E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588AD7DE1AE6A51400435E8E /* Main.storyboard */; };
 		588AD7E21AE6A51400435E8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588AD7E11AE6A51400435E8E /* Images.xcassets */; };
@@ -39,7 +38,6 @@
 		588AD7D31AE6A51400435E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		588AD7D51AE6A51400435E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		588AD7D61AE6A51400435E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		588AD7D91AE6A51400435E8E /* DrawingCanvas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawingCanvas.xcdatamodel; sourceTree = "<group>"; };
 		588AD7DB1AE6A51400435E8E /* CanvasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
 		588AD7DC1AE6A51400435E8E /* CanvasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		588AD7DF1AE6A51400435E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				588AD7DE1AE6A51400435E8E /* Main.storyboard */,
 				588AD7E11AE6A51400435E8E /* Images.xcassets */,
 				588AD7E31AE6A51400435E8E /* LaunchScreen.xib */,
-				588AD7D81AE6A51400435E8E /* DrawingCanvas.xcdatamodeld */,
 				588AD7D11AE6A51400435E8E /* Supporting Files */,
 				588AD7FA1AE6A60D00435E8E /* CanvasView.h */,
 				588AD7FB1AE6A60D00435E8E /* CanvasView.m */,
@@ -255,7 +252,6 @@
 				588AD8041AE6AB7600435E8E /* SettingsKeysHelper.m in Sources */,
 				588AD7D71AE6A51400435E8E /* AppDelegate.m in Sources */,
 				588AD80D1AE6B81A00435E8E /* SelectableView.m in Sources */,
-				588AD7DA1AE6A51400435E8E /* DrawingCanvas.xcdatamodeld in Sources */,
 				588AD7DD1AE6A51400435E8E /* CanvasViewController.m in Sources */,
 				588AD8081AE6B01D00435E8E /* UIColor+Hex.m in Sources */,
 				588AD7D41AE6A51400435E8E /* main.m in Sources */,
@@ -464,19 +460,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		588AD7D81AE6A51400435E8E /* DrawingCanvas.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				588AD7D91AE6A51400435E8E /* DrawingCanvas.xcdatamodel */,
-			);
-			currentVersion = 588AD7D91AE6A51400435E8E /* DrawingCanvas.xcdatamodel */;
-			path = DrawingCanvas.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 588AD7C61AE6A51400435E8E /* Project object */;
 }

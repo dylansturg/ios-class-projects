@@ -47,9 +47,6 @@
     self.canvasWidthConstraint.constant = canvasDimension;
     self.canvasHeightConstraint.constant = canvasDimension;
     
-    self.canvas.layer.borderWidth = 5;
-    self.canvas.layer.borderColor = [[UIColor redColor] CGColor];
-    
     [UIView animateWithDuration:0.25 animations:^{
         [self.view setNeedsLayout];
     }];
@@ -77,6 +74,8 @@
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
     [self adjustConstraintsToStayInFrameWithSize:size];
 }
 
@@ -116,10 +115,7 @@
 }
 
 -(void)setttingsChanged {
-    NSLog(@"Received settings changed notification");
-    
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
     [self updateShapeSettings];
 }
 
