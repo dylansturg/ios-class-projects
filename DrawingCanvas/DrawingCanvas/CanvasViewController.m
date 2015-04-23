@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *canvasHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *canvasLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *canvasBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerXConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerYConstraint;
 
 @property(strong, nonatomic) UIPanGestureRecognizer *dragCanvasGesture;
 
@@ -53,29 +55,59 @@
     }];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    self.centerXConstraint.active = NO;
+    self.centerYConstraint.active = NO;
+    self.centerXConstraint = nil;
+    self.centerYConstraint = nil;
+    
+    self.canvasLeadingConstraint.constant = (self.view.frame.size.width - self.canvas.frame.size.width) / 2;
+    self.canvasBottomConstraint.constant = (self.view.frame.size.height - self.canvas.frame.size.height) / 2;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view setNeedsLayout];
+    }];
+}
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
--(void)dragged: (UIGestureRecognizer*) sender {
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [self adjustConstraintsToStayInFrameWithSize:size];
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (void)dragged: (UIGestureRecognizer*) sender {
     assert(sender == self.dragCanvasGesture);
-        
+    
     CGPoint translation = [self.dragCanvasGesture translationInView:self.view];
     [self.dragCanvasGesture setTranslation:CGPointZero inView:self.view];
     
     self.canvasLeadingConstraint.constant += translation.x;
+    self.canvasBottomConstraint.constant -= translation.y;
+    
+    [self adjustConstraintsToStayInFrameWithSize:self.view.frame.size];
+}
+
+- (void)adjustConstraintsToStayInFrameWithSize:(CGSize)size {
+    
     if(self.canvasLeadingConstraint.constant > 0){
         self.canvasLeadingConstraint.constant = 0;
-    } else if(self.canvasLeadingConstraint.constant < self.view.frame.size.width - self.canvas.frame.size.width){
-        self.canvasLeadingConstraint.constant = self.view.frame.size.width - self.canvas.frame.size.width;
+    } else if(self.canvasLeadingConstraint.constant < size.width - self.canvas.frame.size.width){
+        self.canvasLeadingConstraint.constant = size.width - self.canvas.frame.size.width;
     }
-    
-    self.canvasBottomConstraint.constant -= translation.y;
+
     if(self.canvasBottomConstraint.constant > 0){
         self.canvasBottomConstraint.constant = 0;
-    } else if(self.canvasBottomConstraint.constant < self.view.frame.size.height - self.canvas.frame.size.height){
-        self.canvasBottomConstraint.constant = self.view.frame.size.height - self.canvas.frame.size.height;
+    } else if(self.canvasBottomConstraint.constant < size.height - self.canvas.frame.size.height){
+        self.canvasBottomConstraint.constant = size.height - self.canvas.frame.size.height;
     }
     
     [UIView animateWithDuration:0.25 animations:^{

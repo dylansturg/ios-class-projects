@@ -452,6 +452,7 @@
 				588AD7F61AE6A51400435E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		588AD7F71AE6A51400435E8E /* Build configuration list for PBXNativeTarget "DrawingCanvasTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +461,7 @@
 				588AD7F91AE6A51400435E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
