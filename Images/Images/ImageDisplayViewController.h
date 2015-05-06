@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ImageDisplayViewController : UIViewController
 
+@property (strong, nonatomic) UIImage *displayImage;
 
 @end
 
