@@ -10,7 +10,5 @@
 
 @interface ImageDisplayViewController : UIViewController
 
-@property (strong, nonatomic) UIImage *displayImage;
-
 @end
 

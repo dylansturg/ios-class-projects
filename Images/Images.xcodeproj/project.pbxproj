@@ -14,6 +14,11 @@
 		582A44741AFA78470013FEA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582A44731AFA78470013FEA1 /* Images.xcassets */; };
 		582A44771AFA78470013FEA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582A44751AFA78470013FEA1 /* LaunchScreen.xib */; };
 		582A44831AFA78470013FEA1 /* ImagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A44821AFA78470013FEA1 /* ImagesTests.m */; };
+		582A44921AFA88000013FEA1 /* ImagePickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A44911AFA88000013FEA1 /* ImagePickerCollectionViewController.m */; };
+		582A44951AFA890D0013FEA1 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A44941AFA890D0013FEA1 /* ImagePickerViewController.m */; };
+		582A449B1AFAA95F0013FEA1 /* ImagePickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A449A1AFAA95F0013FEA1 /* ImagePickerNavigationController.m */; };
+		582A449F1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A449D1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m */; };
+		582A44A01AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582A449E1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,15 @@
 		582A447C1AFA78470013FEA1 /* ImagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		582A44811AFA78470013FEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		582A44821AFA78470013FEA1 /* ImagesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesTests.m; sourceTree = "<group>"; };
+		582A44901AFA88000013FEA1 /* ImagePickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerCollectionViewController.h; sourceTree = "<group>"; };
+		582A44911AFA88000013FEA1 /* ImagePickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerCollectionViewController.m; sourceTree = "<group>"; };
+		582A44931AFA890D0013FEA1 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		582A44941AFA890D0013FEA1 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		582A44991AFAA95F0013FEA1 /* ImagePickerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerNavigationController.h; sourceTree = "<group>"; };
+		582A449A1AFAA95F0013FEA1 /* ImagePickerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerNavigationController.m; sourceTree = "<group>"; };
+		582A449C1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerCollectionViewCell.h; sourceTree = "<group>"; };
+		582A449D1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
+		582A449E1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,15 @@
 				582A44731AFA78470013FEA1 /* Images.xcassets */,
 				582A44751AFA78470013FEA1 /* LaunchScreen.xib */,
 				582A44661AFA78470013FEA1 /* Supporting Files */,
+				582A44901AFA88000013FEA1 /* ImagePickerCollectionViewController.h */,
+				582A44911AFA88000013FEA1 /* ImagePickerCollectionViewController.m */,
+				582A44931AFA890D0013FEA1 /* ImagePickerViewController.h */,
+				582A44941AFA890D0013FEA1 /* ImagePickerViewController.m */,
+				582A44991AFAA95F0013FEA1 /* ImagePickerNavigationController.h */,
+				582A449A1AFAA95F0013FEA1 /* ImagePickerNavigationController.m */,
+				582A449C1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.h */,
+				582A449D1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m */,
+				582A449E1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -201,6 +224,7 @@
 			files = (
 				582A44721AFA78470013FEA1 /* Main.storyboard in Resources */,
 				582A44771AFA78470013FEA1 /* LaunchScreen.xib in Resources */,
+				582A44A01AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib in Resources */,
 				582A44741AFA78470013FEA1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +246,10 @@
 				582A446F1AFA78470013FEA1 /* ImageDisplayViewController.m in Sources */,
 				582A446C1AFA78470013FEA1 /* AppDelegate.m in Sources */,
 				582A44691AFA78470013FEA1 /* main.m in Sources */,
+				582A449F1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m in Sources */,
+				582A44951AFA890D0013FEA1 /* ImagePickerViewController.m in Sources */,
+				582A44921AFA88000013FEA1 /* ImagePickerCollectionViewController.m in Sources */,
+				582A449B1AFAA95F0013FEA1 /* ImagePickerNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

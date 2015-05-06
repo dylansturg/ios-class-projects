@@ -6,9 +6,12 @@
 //  Copyright (c) 2015 dylansturg. All rights reserved.
 //
 
+#import "ImagePickerViewController.h"
 #import "ImageDisplayViewController.h"
+#import "ImagePickerNavigationController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface ImageDisplayViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ImageDisplayViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, ImagePickerDelegate>
 
 @property (strong, nonatomic) UIPopoverController *pickerPopover;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -63,14 +66,64 @@
     
 }
 
-- (IBAction)showCustomPicker:(id)sender {
+#pragma mark Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ImagePickerNavigationController *pickerVC = [segue destinationViewController];
+    pickerVC.imagePickerDelegate = self;
 }
 
+#pragma mark ImagePickerDelegate
+
+- (void)imagePicker:(ImagePickerViewController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *pickedImage = info[ImagePickerControllerInfoImage];
+    if (pickedImage){
+        self.imageView.image = pickedImage;
+    }
+}
+
+- (void)imagePickerDidCancel:(ImagePickerViewController *)picker withReason:(ImagePickerViewControllerCancelReason)reason {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if (reason == ImagePickerViewControllerCancelReasonUnauthorized) {
+        UIAlertController *notAvailableAlert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Image Access Unauthorized", nil) message:NSLocalizedString(@"We can't show you any images if you don't give us permission.  We're sad now.  :(", nil) preferredStyle:UIAlertControllerStyleAlert];
+        [notAvailableAlert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Too Bad!", nil) style:UIAlertActionStyleCancel handler:nil]];
+        
+        [self presentViewController:notAvailableAlert animated:YES completion:nil];
+    }
+}
 
 #pragma mark UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    BOOL error = YES;
     
+    if (UTTypeConformsTo((__bridge CFStringRef)mediaType, kUTTypeImage)) {
+        
+        id originalImage = info[UIImagePickerControllerOriginalImage];
+        id editedImage = info[UIImagePickerControllerEditedImage];
+        
+        if (editedImage){
+            self.imageView.image = editedImage;
+            error = NO;
+        } else if(originalImage){
+            self.imageView.image = originalImage;
+            error = NO;
+        } else {
+            // No image selected?
+        }
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    if (error){
+        UIAlertController *notAvailableAlert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Unsuported Media Selected", nil) message:NSLocalizedString(@"The media you selected is not supported by this viewer.", nil) preferredStyle:UIAlertControllerStyleAlert];
+        [notAvailableAlert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleCancel handler:nil]];
+        
+        [self presentViewController:notAvailableAlert animated:YES completion:nil];
+    }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
