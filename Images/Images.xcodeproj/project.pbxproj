@@ -19,6 +19,8 @@
 		582A449B1AFAA95F0013FEA1 /* ImagePickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A449A1AFAA95F0013FEA1 /* ImagePickerNavigationController.m */; };
 		582A449F1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A449D1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m */; };
 		582A44A01AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582A449E1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib */; };
+		582A44A41AFABE1D0013FEA1 /* ImagePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 582A44A21AFABE1D0013FEA1 /* ImagePickerTableViewCell.m */; };
+		582A44A51AFABE1D0013FEA1 /* ImagePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582A44A31AFABE1D0013FEA1 /* ImagePickerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		582A449C1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerCollectionViewCell.h; sourceTree = "<group>"; };
 		582A449D1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
 		582A449E1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		582A44A11AFABE1D0013FEA1 /* ImagePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerTableViewCell.h; sourceTree = "<group>"; };
+		582A44A21AFABE1D0013FEA1 /* ImagePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTableViewCell.m; sourceTree = "<group>"; };
+		582A44A31AFABE1D0013FEA1 /* ImagePickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 				582A449C1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.h */,
 				582A449D1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m */,
 				582A449E1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib */,
+				582A44A11AFABE1D0013FEA1 /* ImagePickerTableViewCell.h */,
+				582A44A21AFABE1D0013FEA1 /* ImagePickerTableViewCell.m */,
+				582A44A31AFABE1D0013FEA1 /* ImagePickerTableViewCell.xib */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				582A44721AFA78470013FEA1 /* Main.storyboard in Resources */,
+				582A44A51AFABE1D0013FEA1 /* ImagePickerTableViewCell.xib in Resources */,
 				582A44771AFA78470013FEA1 /* LaunchScreen.xib in Resources */,
 				582A44A01AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.xib in Resources */,
 				582A44741AFA78470013FEA1 /* Images.xcassets in Resources */,
@@ -244,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				582A446F1AFA78470013FEA1 /* ImageDisplayViewController.m in Sources */,
+				582A44A41AFABE1D0013FEA1 /* ImagePickerTableViewCell.m in Sources */,
 				582A446C1AFA78470013FEA1 /* AppDelegate.m in Sources */,
 				582A44691AFA78470013FEA1 /* main.m in Sources */,
 				582A449F1AFAB1A80013FEA1 /* ImagePickerCollectionViewCell.m in Sources */,

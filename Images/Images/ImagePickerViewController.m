@@ -9,11 +9,13 @@
 #import "ImagePickerViewController.h"
 #import "ImagePickerCollectionViewController.h"
 #import "ImagePickerNavigationController.h"
+#import "ImagePickerTableViewCell.h"
 #import <Photos/Photos.h>
 
 @interface ImagePickerViewController () <PHPhotoLibraryChangeObserver>
 @property (strong, nonatomic) NSOperationQueue *backgroundWork;
 @property (strong, nonatomic) PHFetchResult *smartAlbums;
+@property (strong, nonatomic) NSMutableDictionary* smartAlbumsContents;
 @end
 
 static NSString *reuseIdentifier = @"ImageLibraryCell";
@@ -31,6 +33,9 @@ NSString *const ImagePickerControllerInfoImage = @"ImagePickerControllerInfoImag
             self.delegate = ((ImagePickerNavigationController*)self.navigationController).imagePickerDelegate;
         }
     }
+    
+    self.tableView.rowHeight = 50;
+    [self.tableView registerNib:[UINib nibWithNibName:@"ImagePickerTableViewCell" bundle:nil] forCellReuseIdentifier:reuseIdentifier];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -59,7 +64,6 @@ NSString *const ImagePickerControllerInfoImage = @"ImagePickerControllerInfoImag
             } else { // stuats == PHAuthorizationStatusAuthorized
                 [self lookupPhotoCollections];
             }
-            
         }];
     }
 }
@@ -69,6 +73,18 @@ NSString *const ImagePickerControllerInfoImage = @"ImagePickerControllerInfoImag
     [self.backgroundWork addOperationWithBlock:^{
         PHFetchResult *fetchSmartAblums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:nil];
         self.smartAlbums = fetchSmartAblums;
+        
+        NSMutableDictionary *albums = [[NSMutableDictionary alloc] init];
+        [self.smartAlbums enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            PHAssetCollection *collection = (PHAssetCollection*) obj;
+            
+            PHFetchOptions *options = [[PHFetchOptions alloc] init];
+            options.predicate = [NSPredicate predicateWithFormat:@"mediaType == %d", PHAssetMediaTypeImage];
+            PHFetchResult *contents = [PHAsset fetchAssetsInAssetCollection:collection options:options];
+            [albums setObject:contents forKey:collection];
+        }];
+        self.smartAlbumsContents = albums;
+        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.tableView reloadData];
         }];
@@ -76,8 +92,13 @@ NSString *const ImagePickerControllerInfoImage = @"ImagePickerControllerInfoImag
     
 }
 
+# pragma mark UITableViewDelegate
 
-#pragma mark - Table view data source
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"presentAlbum" sender:self];
+}
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.smartAlbums ? self.smartAlbums.count : 0;
@@ -85,11 +106,19 @@ NSString *const ImagePickerControllerInfoImage = @"ImagePickerControllerInfoImag
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    ImagePickerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     PHAssetCollection *album = self.smartAlbums[indexPath.row];
-    cell.textLabel.text = album.localizedTitle;
-    cell.imageView.backgroundColor = [UIColor lightGrayColor];
+    cell.titleLabel.text = album.localizedTitle;
+    
+    PHFetchResult *fetchedAlbum = [self.smartAlbumsContents objectForKey:album];
+    if (fetchedAlbum && fetchedAlbum.count){
+        int randomIndex = arc4random_uniform((int)fetchedAlbum.count);
+        PHAsset *posterAsset = fetchedAlbum[randomIndex];
+        [[PHImageManager defaultManager] requestImageForAsset:posterAsset targetSize:cell.posterImage.frame.size contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage *result, NSDictionary *info) {
+            cell.posterImage.image = result;
+        }];
+    }
     // Configure the cell...
     
     return cell;
@@ -112,8 +141,18 @@ NSString *const ImagePickerControllerInfoImage = @"ImagePickerControllerInfoImag
     
     if (fetchCollectionChanges){
         self.smartAlbums = fetchCollectionChanges.fetchResultAfterChanges;
-        [self.tableView reloadData];
     }
+    
+    [self.smartAlbumsContents enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        PHFetchResultChangeDetails *collectionChanges = [changeInstance changeDetailsForFetchResult:obj];
+        if (collectionChanges){
+            [self.smartAlbumsContents setObject:collectionChanges.fetchResultAfterChanges forKey:key];
+        }
+    }];
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - Navigation
