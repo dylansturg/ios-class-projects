@@ -15,6 +15,8 @@
 		586326351B0112FC0073F176 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586326331B0112FC0073F176 /* LaunchScreen.xib */; };
 		586326411B0112FC0073F176 /* AccessibleCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 586326401B0112FC0073F176 /* AccessibleCardsTests.m */; };
 		5863264C1B0113430073F176 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863264B1B0113430073F176 /* CardView.m */; };
+		5863264F1B011ABA0073F176 /* DeckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5863264E1B011ABA0073F176 /* DeckView.m */; };
+		586326521B011AFA0073F176 /* DiscardPileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 586326511B011AFA0073F176 /* DiscardPileView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		586326401B0112FC0073F176 /* AccessibleCardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccessibleCardsTests.m; sourceTree = "<group>"; };
 		5863264A1B0113430073F176 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		5863264B1B0113430073F176 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		5863264D1B011ABA0073F176 /* DeckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckView.h; sourceTree = "<group>"; };
+		5863264E1B011ABA0073F176 /* DeckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckView.m; sourceTree = "<group>"; };
+		586326501B011AFA0073F176 /* DiscardPileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscardPileView.h; sourceTree = "<group>"; };
+		586326511B011AFA0073F176 /* DiscardPileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscardPileView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 				586326311B0112FC0073F176 /* Images.xcassets */,
 				586326331B0112FC0073F176 /* LaunchScreen.xib */,
 				586326241B0112FC0073F176 /* Supporting Files */,
+				5863264D1B011ABA0073F176 /* DeckView.h */,
+				5863264E1B011ABA0073F176 /* DeckView.m */,
+				586326501B011AFA0073F176 /* DiscardPileView.h */,
+				586326511B011AFA0073F176 /* DiscardPileView.m */,
 			);
 			path = AccessibleCards;
 			sourceTree = "<group>";
@@ -226,6 +236,8 @@
 			files = (
 				5863262D1B0112FC0073F176 /* CardDealerViewController.m in Sources */,
 				5863262A1B0112FC0073F176 /* AppDelegate.m in Sources */,
+				5863264F1B011ABA0073F176 /* DeckView.m in Sources */,
+				586326521B011AFA0073F176 /* DiscardPileView.m in Sources */,
 				5863264C1B0113430073F176 /* CardView.m in Sources */,
 				586326271B0112FC0073F176 /* main.m in Sources */,
 			);
