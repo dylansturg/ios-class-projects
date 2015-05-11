@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CardView.h"
+
+@protocol CardSource;
+
 @interface DiscardPileView : UIView
+
+@property (weak, nonatomic) id<CardSource> cardSource;
+
+@end
+
+@protocol CardSource <NSObject>
+
+- (CardView*) discardPileView: (DiscardPileView*) drawNextCard;
 
 @end

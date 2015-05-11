@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CardView.h"
+
+@protocol DeckDelegate;
+
 @interface DeckView : UIView
+
+@property (weak, nonatomic) id<DeckDelegate> delegate;
+
+@end
+
+@protocol DekcDelegate <NSObject>
+
+- (void) didShuffleDeck: (DeckView*) deckView;
 
 @end
