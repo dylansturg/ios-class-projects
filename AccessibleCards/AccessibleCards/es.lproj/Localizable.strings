@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  AccessibleCards
+
+  Created by Dylan Sturgeon on 5/11/15.
+  Copyright (c) 2015 dylansturg. All rights reserved.
+*/
+
+"Deck" = "cubierta";
+"Shuffles the deck" = "baraja la cubierta";
+
+"Discard pile" = "pila de descarte";
+"Flips a card" = "Voltea una tarjeta";
+
+"Jack" = "la sota";
+"Queen" = "la reina";
+"King" = "el rey";
+"Ace" = "el as";
+
+"Ten" = "los diez";
+"Nine" = "los nueve";
+"Eight" = "los ocho";
+"Seven" = "los siete";
+"Six" = "los seis";
+"Five" = "los cinco";
+"Four" = "los cuatro";
+"Three" = "los tres";
+"Two" = "los dos";
+
+"♣" = "los clubes";
+"♦" = "los diamentes";
+"♥" = "los corazones";
+"♠" = "las espadas";
+
+"%@ of %@" = "%@ de %@";

@@ -139,7 +139,7 @@
     
     NSAssert(rankText != nil, @"Need a long-text version of this card's rank");
     
-    return [NSString stringWithFormat:NSLocalizedString(@"%@ of %@", @"format string for CardView accessibility label"), rankText, self.suitLabel.text];
+    return [NSString stringWithFormat:NSLocalizedString(@"%@ of %@", @"format string for CardView accessibility label"), NSLocalizedString(rankText, nil), NSLocalizedString(self.suitLabel.text, nil)];
 }
 
 #pragma mark Custom accessors

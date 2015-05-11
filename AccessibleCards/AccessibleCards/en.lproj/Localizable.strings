@@ -1,0 +1,35 @@
+/*
+ Localizable.strings
+ AccessibleCards
+ 
+ Created by Dylan Sturgeon on 5/11/15.
+ Copyright (c) 2015 dylansturg. All rights reserved.
+ */
+
+"Deck" = "Deck";
+"Shuffles the deck" = "Shuffles the deck";
+
+"Discard pile" = "Discard pile";
+"Flips a card" = "Flips a card";
+
+"Jack" = "Jack";
+"Queen" = "Queen";
+"King" = "King";
+"Ace" = "Ace";
+
+"Ten" = "Ten";
+"Nine" = "Nine";
+"Eight" = "Eight";
+"Seven" = "Seven";
+"Six" = "Six";
+"Five" = "Five";
+"Four" = "Four";
+"Three" = "Three";
+"Two" = "Two";
+
+"♣" = "clubs";
+"♦" = "diamonds";
+"♥" = "hearts";
+"♠" = "spades";
+
+"%@ of %@" = "%@ of %@";
