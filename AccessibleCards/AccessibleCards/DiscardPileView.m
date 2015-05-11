@@ -26,7 +26,11 @@
 }
 
 - (NSString *)accessibilityLabel {
-    return NSLocalizedString(@"Discard pile", @"accessibility label for DiscardPileView");
+    if (self.topCard){
+        return self.topCard.accessibilityLabel;
+    } else {
+        return NSLocalizedString(@"Discard pile", @"accessibility label for DiscardPileView");
+    }
 }
 
 - (NSString *)accessibilityHint {
@@ -44,7 +48,14 @@
 
 # pragma mark Private
 - (void) tapped: (id) sender {
-    NSLog(@"Discard Pile Tapped");
+    CardView *nextCard = [self.cardSource drawNextCard:self];
+    if (nextCard) {
+        if (self.topCard){
+            [self.topCard removeFromSuperview];
+        }
+        self.topCard = nextCard;
+        [self addSubview:self.topCard];
+    }
 }
 
 @end

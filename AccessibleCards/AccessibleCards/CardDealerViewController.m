@@ -20,12 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.deck.delegate = self.discardPile;
+    self.discardPile.cardSource = self.deck;
+
+    [self.deck shuffleDeck];
+    
+    self.discardPile.layer.cornerRadius = 5.0;
+    self.discardPile.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.discardPile.layer.borderWidth = 2.0;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

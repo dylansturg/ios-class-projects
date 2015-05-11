@@ -23,8 +23,11 @@
     self.cardIndex = 0;
 }
 
-- (void)setDeckCards:(NSArray *)cards {
-    self.cards = cards;
+- (void)shuffleDeck {
+    self.cards = [CardView shuffledDeck];
+    if (self.delegate) {
+        [self.delegate didShuffleDeck:self];
+    }
 }
 
 # pragma mark UIAccessibility
@@ -51,7 +54,7 @@
 # pragma mark Private
 
 - (void) tapped: (id) sender {
-    NSLog(@"Deck Tapped");
+    [self shuffleDeck];
 }
 
 

@@ -29,7 +29,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4as-Eu-kus" customClass="DiscardPileView">
                                 <rect key="frame" x="403" y="201" width="141" height="198"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4as-Eu-kus" secondAttribute="height" multiplier="2.5:3.5" id="bzj-Ri-6f8"/>

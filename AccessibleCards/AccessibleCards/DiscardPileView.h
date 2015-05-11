@@ -9,18 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "CardView.h"
-#import "DeckView.h"
-
-@protocol CardSource;
+#import "CardDealerViewController.h"
 
 @interface DiscardPileView : UIView <DeckDelegate>
 
 @property (weak, nonatomic) id<CardSource> cardSource;
-
-@end
-
-@protocol CardSource <NSObject>
-
-- (CardView*) drawNextCard: (DiscardPileView*) discardPileView;
 
 @end

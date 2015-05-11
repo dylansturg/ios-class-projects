@@ -86,6 +86,62 @@
     return self;
 }
 
+# pragma mark UIAccessibility
+
+- (NSString *)accessibilityLabel {
+    
+    NSString *rankText;
+    
+    switch (self.rank) {
+        case CardRankJack:
+            rankText = NSLocalizedString(@"Jack", @"name for Jack rank");
+            break;
+        case CardRankQueen:
+            rankText = NSLocalizedString(@"Queen", @"name for Queen rank");
+            break;
+        case CardRankKing:
+            rankText = NSLocalizedString(@"King", @"name for King rank");
+            break;
+        case CardRankAce:
+            rankText = NSLocalizedString(@"Ace", @"name for Ace rank");
+            break;
+        case CardRankTen:
+            rankText = NSLocalizedString(@"Ten", nil);
+            break;
+        case CardRankNine:
+            rankText = NSLocalizedString(@"Nine", nil);
+            break;
+        case CardRankEight:
+            rankText = NSLocalizedString(@"Eight", nil);
+            break;
+        case CardRankSeven:
+            rankText = NSLocalizedString(@"Seven", nil);
+            break;
+        case CardRankSix:
+            rankText = NSLocalizedString(@"Six", nil);
+            break;
+        case CardRankFive:
+            rankText = NSLocalizedString(@"Five", nil);
+            break;
+        case CardRankFour:
+            rankText = NSLocalizedString(@"Four", nil);
+            break;
+        case CardRankThree:
+            rankText = NSLocalizedString(@"Three", nil);
+            break;
+        case CardRankTwo:
+            rankText = NSLocalizedString(@"Two", nil);
+            break;
+            
+        default:
+            break;
+    }
+    
+    NSAssert(rankText != nil, @"Need a long-text version of this card's rank");
+    
+    return [NSString stringWithFormat:NSLocalizedString(@"%@ of %@", @"format string for CardView accessibility label"), rankText, self.suitLabel.text];
+}
+
 #pragma mark Custom accessors
 
 - (void)setRank:(CardRank)rank;

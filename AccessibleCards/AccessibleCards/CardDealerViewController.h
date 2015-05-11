@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardDealerViewController : UIViewController
+@class DeckView;
+@class DiscardPileView;
+@class CardView;
 
+@protocol DeckDelegate <NSObject>
+- (void) didShuffleDeck: (DeckView*) deckView;
+@end
+
+@protocol CardSource <NSObject>
+- (CardView*) drawNextCard: (DiscardPileView*) discardPileView;
+@end
+
+@interface CardDealerViewController : UIViewController
 
 @end
 
