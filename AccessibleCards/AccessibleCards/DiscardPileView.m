@@ -9,7 +9,7 @@
 #import "DiscardPileView.h"
 
 @interface DiscardPileView ()
-
+@property (strong, nonatomic) CardView *topCard;
 @end
 
 @implementation DiscardPileView
@@ -31,6 +31,15 @@
 
 - (NSString *)accessibilityHint {
     return NSLocalizedString(@"Flips a card", @"accessibility hint for DiscardPileView");
+}
+
+# pragma mark DeckDelegate
+
+- (void)didShuffleDeck:(DeckView *)deckView {
+    if (self.topCard) {
+        [self.topCard removeFromSuperview];
+        self.topCard = nil;
+    }
 }
 
 # pragma mark Private

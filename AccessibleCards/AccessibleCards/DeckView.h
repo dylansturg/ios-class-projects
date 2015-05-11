@@ -9,16 +9,19 @@
 #import <UIKit/UIKit.h>
 
 #import "CardView.h"
+#import "DiscardPileView.h"
 
 @protocol DeckDelegate;
 
-@interface DeckView : UIView
+@interface DeckView : UIView <CardSource>
 
 @property (weak, nonatomic) id<DeckDelegate> delegate;
 
+- (void) setDeckCards: (NSArray*) cards;
+
 @end
 
-@protocol DekcDelegate <NSObject>
+@protocol DeckDelegate <NSObject>
 
 - (void) didShuffleDeck: (DeckView*) deckView;
 

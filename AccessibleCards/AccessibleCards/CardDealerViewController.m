@@ -7,8 +7,12 @@
 //
 
 #import "CardDealerViewController.h"
+#import "DiscardPileView.h"
+#import "DeckView.h"
 
 @interface CardDealerViewController ()
+@property (weak, nonatomic) IBOutlet DeckView *deck;
+@property (weak, nonatomic) IBOutlet DiscardPileView *discardPile;
 
 @end
 

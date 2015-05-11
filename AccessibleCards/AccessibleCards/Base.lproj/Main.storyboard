@@ -56,6 +56,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="deck" destination="deV-KM-FGc" id="SVX-Ak-l5r"/>
+                        <outlet property="discardPile" destination="4as-Eu-kus" id="EMV-EV-Q6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

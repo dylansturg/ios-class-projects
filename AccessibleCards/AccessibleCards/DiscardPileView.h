@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "CardView.h"
+#import "DeckView.h"
 
 @protocol CardSource;
 
-@interface DiscardPileView : UIView
+@interface DiscardPileView : UIView <DeckDelegate>
 
 @property (weak, nonatomic) id<CardSource> cardSource;
 
@@ -20,6 +21,6 @@
 
 @protocol CardSource <NSObject>
 
-- (CardView*) discardPileView: (DiscardPileView*) drawNextCard;
+- (CardView*) drawNextCard: (DiscardPileView*) discardPileView;
 
 @end

@@ -11,6 +11,7 @@
 @interface DeckView ()
 
 @property (strong, nonatomic) NSArray *cards;
+@property (assign, nonatomic) NSInteger cardIndex;
 
 @end
 
@@ -19,6 +20,11 @@
 - (void)awakeFromNib {
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
     [self addGestureRecognizer:tapGesture];
+    self.cardIndex = 0;
+}
+
+- (void)setDeckCards:(NSArray *)cards {
+    self.cards = cards;
 }
 
 # pragma mark UIAccessibility
@@ -33,6 +39,13 @@
 
 - (NSString *)accessibilityHint {
     return NSLocalizedString(@"Shuffles the deck", @"accessibility hint for DeckView");
+}
+
+# pragma CardSource
+- (CardView *)drawNextCard:(DiscardPileView *)discardPileView {
+    CardView *card = self.cards[self.cardIndex];
+    self.cardIndex++;
+    return card;
 }
 
 # pragma mark Private
