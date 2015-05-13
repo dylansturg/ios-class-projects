@@ -25,6 +25,7 @@
 
 - (void)shuffleDeck {
     self.cards = [CardView shuffledDeck];
+    self.cardIndex = 0;
     if (self.delegate) {
         [self.delegate didShuffleDeck:self];
     }
@@ -47,8 +48,12 @@
 # pragma CardSource
 - (CardView *)drawNextCard:(DiscardPileView *)discardPileView {
     CardView *card = self.cards[self.cardIndex];
-    self.cardIndex++;
-    return card;
+    if (self.cardIndex < [self.cards count] - 1){
+        self.cardIndex++;
+        return card;
+    } else {
+        return nil;
+    }
 }
 
 # pragma mark Private
