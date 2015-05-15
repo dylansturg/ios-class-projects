@@ -48,11 +48,12 @@
 
 # pragma mark Private
 - (void) tapped: (id) sender {
+    if (self.topCard){
+        [self.topCard removeFromSuperview];
+    }
+    
     CardView *nextCard = [self.cardSource drawNextCard:self];
     if (nextCard) {
-        if (self.topCard){
-            [self.topCard removeFromSuperview];
-        }
         self.topCard = nextCard;
         [self addSubview:self.topCard];
     }

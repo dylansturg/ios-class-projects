@@ -47,6 +47,7 @@
 
 # pragma CardSource
 - (CardView *)drawNextCard:(DiscardPileView *)discardPileView {
+    NSLog(@"Draw Count: %ld", (long)self.cardIndex);
     CardView *card = self.cards[self.cardIndex];
     if (self.cardIndex < [self.cards count] - 1){
         self.cardIndex++;
