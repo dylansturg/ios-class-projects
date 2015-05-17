@@ -14,6 +14,7 @@
 		58297F6F1B07E08F004906C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58297F6E1B07E08F004906C9 /* Images.xcassets */; };
 		58297F721B07E08F004906C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58297F701B07E08F004906C9 /* LaunchScreen.xib */; };
 		58297F7E1B07E08F004906C9 /* OperationsManufacturingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58297F7D1B07E08F004906C9 /* OperationsManufacturingTests.m */; };
+		58297F891B07E26E004906C9 /* OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58297F881B07E26E004906C9 /* OperationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		58297F771B07E08F004906C9 /* OperationsManufacturingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperationsManufacturingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58297F7C1B07E08F004906C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58297F7D1B07E08F004906C9 /* OperationsManufacturingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationsManufacturingTests.m; sourceTree = "<group>"; };
+		58297F871B07E26E004906C9 /* OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationView.h; sourceTree = "<group>"; };
+		58297F881B07E26E004906C9 /* OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				58297F6E1B07E08F004906C9 /* Images.xcassets */,
 				58297F701B07E08F004906C9 /* LaunchScreen.xib */,
 				58297F611B07E08F004906C9 /* Supporting Files */,
+				58297F871B07E26E004906C9 /* OperationView.h */,
+				58297F881B07E26E004906C9 /* OperationView.m */,
 			);
 			path = OperationsManufacturing;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				58297F6A1B07E08F004906C9 /* OperationsViewController.m in Sources */,
 				58297F671B07E08F004906C9 /* AppDelegate.m in Sources */,
+				58297F891B07E26E004906C9 /* OperationView.m in Sources */,
 				58297F641B07E08F004906C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

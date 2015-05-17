@@ -7,8 +7,13 @@
 //
 
 #import "OperationsViewController.h"
+#import "OperationView.h"
 
 @interface OperationsViewController ()
+@property (weak, nonatomic) IBOutlet OperationView *gizmoOperationView;
+@property (weak, nonatomic) IBOutlet OperationView *widgetOperationView;
+@property (weak, nonatomic) IBOutlet OperationView *gadgetsOperationView;
+@property (weak, nonatomic) IBOutlet OperationView *multitoolsOperationView;
 
 @end
 
@@ -16,12 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.gizmoOperationView.productName = @"Gizmos";
+    self.widgetOperationView.productName = @"Widgets";
+    self.gadgetsOperationView.productName = @"Gadgets";
+    self.multitoolsOperationView.productName = @"Multitools";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
