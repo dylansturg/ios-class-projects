@@ -7,6 +7,7 @@
 //
 
 #import "OperationView.h"
+#import "ProductOperation.h"
 
 @interface OperationView ()
 
@@ -41,6 +42,25 @@
     }];
 }
 
+- (void) clearOperations: (id) sender {
+    [self.productQueue cancelAllOperations];
+}
+
+- (void) toggleQueueStatus: (id) sender {
+    NSAssert([sender isKindOfClass:[UIButton class]], @"toggleQueueStatus only expects to receive a button");
+    UIButton *button = (UIButton*) sender;
+    
+    if (button.tag == 0){
+        button.tag = 1;
+        [button setTitle:NSLocalizedString(@"Resume", nil) forState:UIControlStateNormal];
+        self.productQueue.suspended = YES;
+    } else {
+        button.tag = 0;
+        [button setTitle:NSLocalizedString(@"Suspend", nil) forState:UIControlStateNormal];
+        self.productQueue.suspended = NO;
+    }
+}
+
 - (void) queueOneOperation: (id) sender {
     [self queueOperations:1];
 }
@@ -60,16 +80,15 @@
     }
     
     for (int i=0; i < count; i++){
-        [self.productQueue addOperationWithBlock:^{
-            int sleepTime = USEC_PER_SEC * arc4random_uniform(3) + arc4random_uniform(USEC_PER_SEC) + USEC_PER_SEC / 2;
-            usleep(sleepTime);
-            
+        NSOperation *task = [ProductOperation productOperationWithCompletionBlock:^{
             @synchronized(self){
                 if (self.productionCount > 0) {
                     self.productionCount--;
                 }
             }
         }];
+        
+        [self.productQueue addOperation:task];
     }
 }
 
@@ -194,6 +213,24 @@
     [constraints addObject:[NSLayoutConstraint constraintWithItem:decrementParallelBtn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.parallelOperationsCountLabel attribute:NSLayoutAttributeLeadingMargin multiplier:1 constant:-5]];
     [constraints addObject:[NSLayoutConstraint constraintWithItem:decrementParallelBtn attribute:NSLayoutAttributeCenterYWithinMargins relatedBy:NSLayoutRelationEqual toItem:parallelOpsLabel attribute:NSLayoutAttributeCenterYWithinMargins multiplier:1 constant:0]];
     
+    UIButton *pause = [UIButton buttonWithType:UIButtonTypeSystem];
+    [pause setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [pause setTitle:NSLocalizedString(@"Suspend", @"Pause OperationView work queue") forState:UIControlStateNormal];
+    [pause addTarget:self action:@selector(toggleQueueStatus:) forControlEvents:UIControlEventTouchUpInside];
+    [pause setTag:0];
+    [self addSubview:pause];
+    
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:pause attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1 constant:0]];
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:pause attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1 constant:0]];
+    
+    UIButton *cancelOps = [UIButton buttonWithType:UIButtonTypeSystem];
+    [cancelOps setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [cancelOps setTitle:NSLocalizedString(@"Cancel", nil) forState:UIControlStateNormal];
+    [cancelOps addTarget:self action:@selector(clearOperations:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:cancelOps];
+    
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:cancelOps attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1 constant:0]];
+    [constraints addObject:[NSLayoutConstraint constraintWithItem:cancelOps attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1 constant:0]];
     
     [NSLayoutConstraint activateConstraints:constraints];
 }
