@@ -93,8 +93,10 @@
 }
 
 - (void) incrementParallelCount: (id) sender {
-    self.productQueue.maxConcurrentOperationCount = self.productQueue.maxConcurrentOperationCount + 1;
-    [self updateParallelCountLabel];
+    if (self.productQueue.maxConcurrentOperationCount < 9){
+        self.productQueue.maxConcurrentOperationCount = self.productQueue.maxConcurrentOperationCount + 1;
+        [self updateParallelCountLabel];
+    }
 }
 
 - (void) decrementParallelCount: (id) sender {
